@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.custom.launchmode">
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".ui.MainActivity"
+            android:launchMode="standard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--standard 标准启动模式 @author Ysw created 2020/3/8 -->
+        <activity
+            android:name=".ui.A_Activity"
+            android:launchMode="standard" />
+
+        <!--singleTop 启动模式 @author Ysw created 2020/3/8 -->
+        <activity
+            android:name=".ui.B_Activity"
+            android:launchMode="singleTop" />
+
+        <!--singleTask 启动模式 @author Ysw created 2020/3/8 -->
+        <activity
+            android:name=".ui.C_Activity"
+            android:launchMode="singleTask" />
+
+        <!--singleInstance 启动模式 @author Ysw created 2020/3/8 -->
+        <activity
+            android:name=".ui.D_Activity"
+            android:launchMode="singleInstance" />
+
+        <!--singleTask 启动模式 @author Ysw created 2020/3/8 -->
+        <activity
+            android:name=".ui.E_Activity"
+            android:launchMode="singleTask" />
+
+        <!--singleInstance 启动模式 @author Ysw created 2020/3/8 -->
+        <activity
+            android:name=".ui.F_Activity"
+            android:launchMode="singleInstance" />
+    </application>
+
+</manifest>
