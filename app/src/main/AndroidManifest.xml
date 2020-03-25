@@ -14,15 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.RecyclerViewActivity"></activity>
-        <activity
-            android:name=".ui.MainActivity"
-            android:launchMode="standard">
+        <activity android:name=".ui.RecyclerViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:launchMode="standard">
+
         </activity> <!-- standard 标准启动模式 @author Ysw created 2020/3/8 -->
         <activity
             android:name=".ui.A_Activity"
