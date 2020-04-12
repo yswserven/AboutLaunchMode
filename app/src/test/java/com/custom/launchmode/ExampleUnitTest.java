@@ -13,5 +13,10 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
+
+        String str = "哈哈";
+        byte[] bytes = str.getBytes();
+
+        System.out.println(bytes.length);
     }
 }

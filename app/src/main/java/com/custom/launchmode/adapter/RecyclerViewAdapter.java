@@ -27,16 +27,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (1 == viewType) {
-            return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_item, parent, false));
+            return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_item_one, parent, false));
         } else {
-            return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_item_specialy, parent, false));
+            return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_item_content, parent, false));
         }
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.mTvName.setText(mData.get(position).getName());
-        holder.mTvAge.setText(mData.get(position).getAge());
     }
 
     @Override
@@ -46,21 +45,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemViewType(int position) {
-        if (position > 10) {
+        String name = mData.get(position).getName();
+        if (position == 0||"其他".equals(name)) {
             return 1;
         } else {
-            return super.getItemViewType(position);
+            return 3;
         }
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView mTvName;
-        TextView mTvAge;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
             mTvName = itemView.findViewById(R.id.tv_name);
-            mTvAge = itemView.findViewById(R.id.tv_age);
         }
     }
 }
